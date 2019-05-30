@@ -16,7 +16,6 @@ public class ReentrantLockCondition implements Runnable{
     public static ReentrantLock lock = new ReentrantLock();
     public static Condition condition = lock.newCondition();
 
-
     @Override
     public void run() {
         try {

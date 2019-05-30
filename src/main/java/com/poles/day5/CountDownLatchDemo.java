@@ -1,8 +1,6 @@
 package com.poles.day5;
 
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;

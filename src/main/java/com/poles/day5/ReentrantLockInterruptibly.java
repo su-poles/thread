@@ -1,8 +1,5 @@
 package com.poles.day5;
 
-import sun.jvm.hotspot.runtime.DeadlockDetector;
-
-import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**

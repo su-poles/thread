@@ -1,5 +1,4 @@
-package com.poles.day4;import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+package com.poles.day4;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

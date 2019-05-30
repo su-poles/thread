@@ -1,5 +1,4 @@
-package com.poles.day5;import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+package com.poles.day5;
 
 import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
@@ -30,8 +29,6 @@ import java.util.concurrent.CyclicBarrier;
 *********************************************************************
 */
 public class CyclicBarrierDemo{
-    private static final Log logger = LogFactory.getLog(CyclicBarrier.class);
-
     private static class Soldier implements Runnable {
         private String soldierName;
         private final CyclicBarrier cyclicBarrier;

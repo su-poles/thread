@@ -1,5 +1,4 @@
-package com.poles.day5;import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+package com.poles.day5;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;

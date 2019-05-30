@@ -1,4 +1,6 @@
-package com.poles.day2;import org.apache.commons.logging.Log;
+package com.poles.day2;
+
+import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
