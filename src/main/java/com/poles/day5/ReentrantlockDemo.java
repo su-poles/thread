@@ -21,7 +21,7 @@ public class ReentrantlockDemo implements Runnable{
 
     @Override
     public void run() {
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 10000; i++) {
             //重入锁的特点，加锁加了几次，那么一定要解除锁几次，因为每次加锁，重入锁锁的许可数量就+1，两次加锁，这个线程获取的重入锁的许可数量就是2，后面就一定要解锁2次
             lock.lock();
             lock.lock();
@@ -30,7 +30,7 @@ public class ReentrantlockDemo implements Runnable{
             }finally {
                 //这个手动释放的，释放的地方和时间都是人为控制的，如果使用Synchronized，那么就不能控制其释放时机
                 lock.unlock();
-                //lock.unlock();
+//                lock.unlock();   //必须要重复释放锁，否则一直处于锁状态
             }
         }
     }
