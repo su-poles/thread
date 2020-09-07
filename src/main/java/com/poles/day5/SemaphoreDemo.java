@@ -44,6 +44,8 @@ public class SemaphoreDemo implements Runnable{
             executorService.submit(demo);
         }
 
+        executorService.shutdown();
+
         /**
          * 总共有20个线程执行，每个线程申请一个许可，因为许可总数是5个，所以刚开始有5个线程瞬间就执行完毕
          * 然后2秒钟以后，有5个线程执行完成然后释放许可，另外5个线程各自获取到1个许可，所有又会有5个线程瞬间执行完毕......

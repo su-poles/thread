@@ -20,7 +20,7 @@ public class InterruptedSleepTest {
         thread.start();
         //停留5秒钟
         Thread.sleep(5000);
-        thread.interrupt();
+        thread.interrupt();  //中断线程
     }
 }
 
