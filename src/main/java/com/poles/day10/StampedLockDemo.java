@@ -52,7 +52,7 @@ public class StampedLockDemo implements Runnable{
     }
 
     double distanceFromOrigin() { // a read-only method
-        long stamp = sl.tryOptimisticRead();
+        long stamp = sl.tryOptimisticRead();            //乐观读锁
         int currentX = x, currentY = y;
         if (!sl.validate(stamp)) {
             stamp = sl.readLock();

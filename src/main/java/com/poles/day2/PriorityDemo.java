@@ -1,7 +1,5 @@
 package com.poles.day2;
 
-import javafx.scene.layout.Priority;
-
 /**
 *********************************************************************
 * 

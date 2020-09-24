@@ -1,6 +1,5 @@
 package com.poles.day6;
 
-import javafx.concurrent.Task;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -85,9 +84,7 @@ public class CountTask extends RecursiveTask<Long> {
         try {
             retValue = result.get();
             System.out.println("sum = " + retValue);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
     }

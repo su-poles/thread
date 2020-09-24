@@ -15,7 +15,7 @@ import java.util.concurrent.locks.Lock;
 public class MylockC implements Lock {
     private volatile int i = 0;
 
-    private Sync sync = new Sync();
+    private SyncA sync = new SyncA();
 
     @Override
     public void lock() {

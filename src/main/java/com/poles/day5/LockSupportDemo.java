@@ -16,7 +16,7 @@ import java.util.concurrent.locks.LockSupport;
 */
 @Setter
 public class LockSupportDemo implements Runnable{
-    public static Object obj = new Object();
+    public static final Object obj = new Object();
     private String name;
 
     public LockSupportDemo(String name) {
@@ -45,8 +45,9 @@ public class LockSupportDemo implements Runnable{
         LockSupport.unpark(t2);
         t1.join();
         t2.join();
-        /**
-         * LockSupport可以响应中断，但不抛出异常, 可以得到中断标识（也就是有人调用terrup()时，可以中断线程）
+
+        /*
+         * LockSupport可以响应中断，但不抛出异常, 可以得到中断标识（也就是有人调用interrupt()时，可以中断线程）
          * 中断响应的结果是，park()函数的返回，可以从Thread.interrupted()中得到中断标志
          */
     }

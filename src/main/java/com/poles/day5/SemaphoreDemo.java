@@ -22,7 +22,7 @@ public class SemaphoreDemo implements Runnable{
     public void run() {
         try {
             //线程执行体：线程执行时，先申请一个许可，然后往下操作，完成之后，释放许可
-            semaphore.acquire();
+            semaphore.acquire();   //阻塞式的
             //模拟一个耗时操作
             Thread.sleep(2000);
             System.out.println(Thread.currentThread().getName() + ":done!");
