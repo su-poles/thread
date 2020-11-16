@@ -1,5 +1,6 @@
-package jmh;
+package com.jmh;
 
+import com.jmh.ParallelStreamDemo;
 import org.openjdk.jmh.annotations.*;
 
 /**

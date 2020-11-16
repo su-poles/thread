@@ -1,4 +1,4 @@
-package jmh;
+package com.jmh;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,9 @@ public class ParallelStreamDemo {
     static List<Integer> nums = new ArrayList<>();
     static {
         Random r = new Random();
-        for (int i = 0; i < 10000; i++) nums.add(1000000 + r.nextInt(1000000));
+        for (int i = 0; i < 10000; i++) {
+            nums.add(1000000 + r.nextInt(1000000));
+        }
     }
 
     static void foreach() {
@@ -29,7 +31,9 @@ public class ParallelStreamDemo {
 
     static boolean isPrime(int num) {
         for(int i=2; i<=num/2; i++) {
-            if(num % i == 0) return false;
+            if(num % i == 0) {
+                return false;
+            }
         }
         return true;
     }

@@ -1,7 +1,7 @@
 package com.thread;
 
 import java.lang.invoke.MethodHandles;
-import java.lang.invoke.VarHandle;
+//import java.lang.invoke.VarHandle;
 
 /**
 *********************************************************************
@@ -14,31 +14,31 @@ import java.lang.invoke.VarHandle;
 *********************************************************************
 */
 public class VarhandleDemo {
-    int x = 10;
-    static VarHandle varHandle;
-
-    static {
-        try {
-            varHandle = MethodHandles.lookup().findVarHandle(VarhandleDemo.class, "x", int.class);
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            e.printStackTrace();
-        }
-    }
+//    int x = 10;
+//    static VarHandle varHandle;
+//
+//    static {
+//        try {
+//            varHandle = MethodHandles.lookup().findVarHandle(VarhandleDemo.class, "x", int.class);
+//        } catch (NoSuchFieldException | IllegalAccessException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 
     public static void main(String[] args) {
-        VarhandleDemo v = new VarhandleDemo();
-
-        System.out.println(varHandle.get(v));
-        varHandle.set(v, 11);
-        System.out.println(v.x);
-
-
-        varHandle.compareAndSet(v, 11, 12);   //通过CAS将x的值改为12， 期望值为11
-        System.out.println(v.x);
-
-        varHandle.getAndAdd(v, 13);          //在原来的值（12）的基础上，加上13，并返回原来的值，先返回后做加法
-        System.out.println(v.x);
+//        VarhandleDemo v = new VarhandleDemo();
+//
+//        System.out.println(varHandle.get(v));
+//        varHandle.set(v, 11);
+//        System.out.println(v.x);
+//
+//
+//        varHandle.compareAndSet(v, 11, 12);   //通过CAS将x的值改为12， 期望值为11
+//        System.out.println(v.x);
+//
+//        varHandle.getAndAdd(v, 13);          //在原来的值（12）的基础上，加上13，并返回原来的值，先返回后做加法
+//        System.out.println(v.x);
 
     }
 }
